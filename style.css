@@ -1,0 +1,30 @@
+body {
+    background-color: black;
+    color: #bbb;
+}
+
+#container {
+    text-align: center;
+}
+
+#reset {
+    /* Add button styling */
+}
+
+#sketchpad {
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    line-height: 0;
+}
+
+.square {
+    display: inline-block;
+    background-color: #bbb;
+    margin: 0;
+    padding: 0;
+}
+
+.drawn {
+    background-color: green;
+}
