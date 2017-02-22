@@ -25,7 +25,7 @@ $(document).ready(function() {
     drawGrid(16);
     
     //Draw!
-    $('.square').on('mouseenter', function() {
+    $('#sketchpad').on('mouseenter', '.square', function() {
         $(this).addClass('drawn');
     });
 

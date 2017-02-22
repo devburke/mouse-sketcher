@@ -12,8 +12,8 @@ body {
 }
 
 #sketchpad {
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
     margin: auto;
     line-height: 0;
 }
@@ -23,6 +23,7 @@ body {
     background-color: #bbb;
     margin: 0;
     padding: 0;
+    border: 0;
 }
 
 .drawn {
