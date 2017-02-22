@@ -1,14 +1,9 @@
 body {
     background-color: black;
-    color: #bbb;
 }
 
 #container {
     text-align: center;
-}
-
-#reset {
-    /* Add button styling */
 }
 
 #sketchpad {

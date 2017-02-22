@@ -1,7 +1,4 @@
 function drawGrid(squaresPerSide) {
-    //Figure out square size
-    var squareDimension = $('#sketchpad').width() / squaresPerSide;
-
     //Add rows
     for (var i = 0; i < squaresPerSide; i++) {
         $('#sketchpad').append('<div class="row"></div>');
@@ -13,6 +10,7 @@ function drawGrid(squaresPerSide) {
     }
 
     //Set square sizes
+    var squareDimension = $('#sketchpad').width() / squaresPerSide;
     $('.square').css({
         'height': squareDimension,
         'width': squareDimension
@@ -33,7 +31,7 @@ $(document).ready(function() {
         $('#sketchpad').empty();
 
         //Add something here to verify that input was an integer
-        var squaresPerSide = prompt('How many squares per side would you like?');
+        var squaresPerSide = prompt('How many squares per side would you like?',16);
         drawGrid(squaresPerSide);
     });
 });
