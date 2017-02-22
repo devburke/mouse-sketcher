@@ -1,37 +1,36 @@
 function drawGrid(squaresPerSide) {
+    //Figure out square size
     var squareDimension = $('#sketchpad').width() / squaresPerSide;
 
-    for (var row = 0; row < squaresPerSide; row++) {
-        for (var col = 0; col < squaresPerSide; col++) {
-            var newSquare = document.createElement('div');
-            newSquare.className = 'square';
-            $(newSquare).css({
-                'height': squareDimension,
-                'width': squareDimension
-            });
-            $('#sketchpad').append(newSquare);
-        }
-        $('#sketchpad').append('<br/>');
-        
+    //Add rows
+    for (var i = 0; i < squaresPerSide; i++) {
+        $('#sketchpad').append('<div class="row"></div>');
     }
-}
 
-function clearGrid() {
-    $('#sketchpad').empty();
+    //Fill rows
+    for (var i = 0; i < squaresPerSide; i++) {
+        $('.row').append('<div class="square"></div>');
+    }
+
+    //Set square sizes
+    $('.square').css({
+        'height': squareDimension,
+        'width': squareDimension
+    });
 }
 
 $(document).ready(function() {
     //Set it up
     drawGrid(16);
-    
+
     //Draw!
     $('#sketchpad').on('mouseenter', '.square', function() {
         $(this).addClass('drawn');
     });
 
-    //Reset it
+    //Reset
     $('#reset').on('click', function() {
-        clearGrid();
+        $('#sketchpad').empty();
 
         //Add something here to verify that input was an integer
         var squaresPerSide = prompt('How many squares per side would you like?');
