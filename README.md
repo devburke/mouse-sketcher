@@ -1,4 +1,4 @@
-This project is a challenge to practice Javascript (and maybe jQuery) skills.
+This project is a challenge to practice Javascript and jQuery skills.
 
 Credit to [The Odin Project](http://www.theodinproject.com/courses/web-development-101/lessons/javascript-and-jquery?ref=lnav) for the idea.
 
