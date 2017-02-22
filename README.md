@@ -1,0 +1,1 @@
+This project is a challenge to practice Javascript (and maybe jQuery) skills.
