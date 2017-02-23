@@ -1,3 +1,5 @@
+var mode;
+
 function drawGrid(squaresPerSide) {
 
     //Add rows
@@ -18,12 +20,17 @@ function drawGrid(squaresPerSide) {
     });
 }
 
+function setMode(newMode) {
+    mode = newMode;
+    $('#' + newMode).addClass('selectedMode').siblings().removeClass('selectedMode');
+}
+
 $(document).ready(function() {
 
     //Set up
     var squaresPerSide = 16;
     drawGrid(squaresPerSide);
-    var mode = 'pen';
+    setMode('pen');
 
     //Draw!
     $('#sketchpad').on('mouseenter', '.square', function() {
@@ -31,7 +38,8 @@ $(document).ready(function() {
         switch (mode) {
             case 'pen':
                 $(this).css({
-                    'opacity': 1
+                    'opacity': 1,
+                    'background-color': 'black'
                 });
                 break;
             case 'pencil':
@@ -45,6 +53,15 @@ $(document).ready(function() {
                         'opacity': 1
                     });
                 }
+                break;
+            case 'rainbow':
+                var r = Math.floor(Math.random() * 256);
+                var g = Math.floor(Math.random() * 256);
+                var b = Math.floor(Math.random() * 256);
+                $(this).css({
+                    'opacity': 1,
+                    'background-color': 'rgb(' + r + ',' + g + ',' + b + ')'
+                });
                 break;
             case 'eraser':
                 if (opacity > 0) {
@@ -63,15 +80,6 @@ $(document).ready(function() {
                     });
                 }
                 break;
-            case 'rainbow':
-                var r = Math.floor(Math.random() * 256);
-                var g = Math.floor(Math.random() * 256);
-                var b = Math.floor(Math.random() * 256);
-                $(this).css({
-                    'opacity': 1,
-                    'background-color': 'rgb(' + r + ',' + g + ',' + b + ')'
-                });
-                break;
         }
     });
 
@@ -82,8 +90,8 @@ $(document).ready(function() {
         var newSquaresPerSide;
         var invalidInput;
         do {
-            newSquaresPerSide = prompt('How many squares per side would you \
-            like?', squaresPerSide);
+            newSquaresPerSide = prompt('How many squares per side would you like?',
+                squaresPerSide);
             var isNull = newSquaresPerSide === null;
             var isInteger = $.isNumeric(newSquaresPerSide) &&
                 Number.isInteger(+newSquaresPerSide);
@@ -103,6 +111,6 @@ $(document).ready(function() {
 
     //Change mode
     $('#modes').on('click', 'button', function() {
-        mode = $(this).attr('id');
+        setMode($(this).attr('id'));
     });
 });

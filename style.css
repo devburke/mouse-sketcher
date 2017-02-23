@@ -1,5 +1,6 @@
 body {
     background-color: #eee;
+    font-family: Pangolin, Arial, sans-serif;
 }
 
 #container {
@@ -13,11 +14,48 @@ body {
     align-items: flex-end;
 }
 
+h1 {
+    line-height: 0;
+}
+
+#reset {
+    border: none;
+    border-radius: 3px;
+    font: 1em Pangolin, Arial, sans-serif;
+    opacity: .6;
+    transition: .1s;
+}
+
+#reset:hover {
+    opacity: .8;
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,.5);
+}
+
+#modes button {
+    margin: 2px;
+    padding: 8px;
+    border: 0;
+    background-color: transparent;
+    border-radius: 100%;
+    opacity: .5;
+    transition: .2s;
+}
+
+#modes button:hover {
+    opacity: 1;
+}
+
+#modes .selectedMode, #modes .selectedMode:hover {
+    background-color: #ddd;
+    opacity: 1;
+    box-shadow: 0px 2px 10px 0px;
+}
+
 #sketchpad {
     background-color: white;
     width: 600px;
     height: 600px;
-    margin: auto;
+    margin: 10px auto;
 }
 
 .row {
