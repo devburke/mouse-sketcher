@@ -53,7 +53,9 @@ $(document).ready(function() {
                     });
                 }
 
-                //Double check for browser weirdness like Safari not wanting to set it all the way to 0, and adjust for erasing too far past 0, since it erases faster than the pencil draws
+                //Double check for browser weirdness like Safari not wanting to 
+                //set it all the way to 0, and adjust for erasing too far past 
+                //0, since it erases faster than the pencil draws
                 var newOpacity = $(this).css('opacity')
                 if (opacity - newOpacity < .015 || newOpacity < 0) {
                     $(this).css({
@@ -80,7 +82,8 @@ $(document).ready(function() {
         var newSquaresPerSide;
         var invalidInput;
         do {
-            newSquaresPerSide = prompt('How many squares per side would you like?', squaresPerSide);
+            newSquaresPerSide = prompt('How many squares per side would you 
+            like?', squaresPerSide);
             var isNull = newSquaresPerSide === null;
             var isInteger = $.isNumeric(newSquaresPerSide) && Number.isInteger(+newSquaresPerSide);
             var isPositive = newSquaresPerSide > 0;
