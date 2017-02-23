@@ -76,7 +76,8 @@ $(document).ready(function() {
                 var newOpacity = $(this).css('opacity')
                 if (opacity - newOpacity < .015 || newOpacity < 0) {
                     $(this).css({
-                        'opacity': 0
+                        'opacity': 0,
+                        'background-color': 'black'
                     });
                 }
                 break;
