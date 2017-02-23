@@ -82,10 +82,11 @@ $(document).ready(function() {
         var newSquaresPerSide;
         var invalidInput;
         do {
-            newSquaresPerSide = prompt('How many squares per side would you 
+            newSquaresPerSide = prompt('How many squares per side would you \
             like?', squaresPerSide);
             var isNull = newSquaresPerSide === null;
-            var isInteger = $.isNumeric(newSquaresPerSide) && Number.isInteger(+newSquaresPerSide);
+            var isInteger = $.isNumeric(newSquaresPerSide) &&
+                Number.isInteger(+newSquaresPerSide);
             var isPositive = newSquaresPerSide > 0;
             invalidInput = !isNull && !(isInteger && isPositive);
             if (invalidInput) {
