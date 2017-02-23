@@ -1,26 +1,35 @@
 body {
-    background-color: black;
+    background-color: #eee;
 }
 
 #container {
-    text-align: center;
+    width: 600px;
+    margin: auto;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 
 #sketchpad {
+    background-color: white;
     width: 600px;
     height: 600px;
     margin: auto;
-    line-height: 0;
+}
+
+.row {
+    display: flex;
 }
 
 .square {
     display: inline-block;
-    background-color: #bbb;
     margin: 0;
     padding: 0;
     border: 0;
-}
+    opacity: 0;
+    background-color: black;
 
-.drawn {
-    background-color: green;
 }
