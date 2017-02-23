@@ -19,6 +19,7 @@ h1 {
 }
 
 #reset {
+    background-color: #C0C0C0;
     border: none;
     border-radius: 3px;
     font: 1em Pangolin, Arial, sans-serif;
