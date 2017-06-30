@@ -1,11 +1,11 @@
 * {
     margin:1;
     padding:1;
+    font-family: Pangolin, Arial, sans-serif;
 }
 
 body {
     background-color: #eee;
-    font-family: Pangolin, Arial, sans-serif;
 }
 
 #container {
@@ -27,7 +27,7 @@ h1 {
     background-color: #C0C0C0;
     border: none;
     border-radius: 3px;
-    font: 1em Pangolin, Arial, sans-serif;
+    font-size: 1em;
     opacity: .6;
     transition: .1s;
 }
